@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>002-jQuery的静态each方法.html</title>
+	<title>003-jQuery的静态map方法.html</title>
 </head>
 <body>
 	
@@ -20,13 +20,14 @@
 		// console.log(index,value);
 	})
 	/*
-	jQuery用的是each方法遍历数组，
-	第一个参数是下标，第二个参数是值，
+	jQuery用的是map方法遍历数组，
+	第一个参数是值，第二个参数是数组下标，
 	可以遍历伪数组
-	each遍历有返回值，且返回当前遍历的数组
+	map遍历有返回值，我们可以在回调函数中自己操作数组
 	*/
-	var res=$.each(arr1,function(index,value){
+	var res=$.map(arr1,function(value,index){
 		console.log(index,value);
+		return value+1;
 	});
 	console.log(res);
 </script>

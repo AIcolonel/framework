@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>006-属性和属性节点.html</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		$(function(){
+		   //属性节点就是HTML中写在标签内部的属性，属性节点储存在attributes这个对象中
+		   //可以使用setAttribute方法设置属性节点，使用getAttribute获取属性节点
+		   //操作属性节点，对象必须是DOM节点，不能是jQuery对象
+		   //获取属性节点， 
+		  	var oDom=$('div')[0];
+		  	$('div')[0].setAttribute("name","lnj");
+		  	console.log($('div')[0].getAttribute("name"));
+		});
+	</script>
+</head>
+<body>
+	<div name='box' age="11"></div>
+</body>
+</html>
