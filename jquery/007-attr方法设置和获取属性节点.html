@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>007-attr方法设置和获取属性节点.html</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		$(function(){
+			/*
+				1.attr(name|pro|key,val|fn)
+				传递一个参数是获取属性，两个参数设置属性值
+				获取属性：找到所有元素，但只返回第一个元素的属性
+				设置属性：找到所有元素，设置属性值
+
+				2.removeAttr(name)
+				删除属性节点：找到对应所有元素，删除指定属性
+				删除多个属性节点：属性名之间用空格隔开
+			*/
+			// console.log($('span').attr('class'));
+		   	// $('span').attr('class','box');
+		   	// $('span').removeAttr('name');
+		   	$('span').removeAttr('name class');
+		});
+	</script>
+</head>
+<body>
+	<span class="span1" name="box1"></span>
+	<span class="span2" name="box2"></span>
+</body>
+</html>

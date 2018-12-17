@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>008-pop方法操作属性.html</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		$(function(){
+			/*
+				1.prop(n|p|k,v|f)
+				用法和特点与attr一样
+				一个参数是获取指定元素的指定属性
+				两个参数是设置属性和值
+				既可以操作属性，也可以操作属性节点
+				2.removeProp(name)
+			*/
+			// console.log($('span').prop('className'));
+
+			//区别：返回值不一样
+		   	console.log($('input').prop('checked'))//true
+		   	console.log($('input').attr('checked'))//checked
+
+		   	$('span').prop('class','lnj')
+		});
+	</script>
+</head>
+<body>
+	<span class="span1" name="box1"></span>
+	<span class="span2" name="box2"></span>
+	<input type="checkbox" checked>
+</body>
+</html>

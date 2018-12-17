@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>009-attr和prop综合小案例对比.html</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		$(function(){
+		   var oBtn=document.getElementsByTagName('button')[0];
+		   var oInput=document.getElementsByTagName('input')[0];
+		   oBtn.onclick=function(){
+		   		var val=oInput.value;
+		   		console.log(val)
+		   		// $('img').eq(0).attr('src',val);
+		   		$('img').eq(0).prop('src',val);
+		   }
+		});
+	</script>
+</head>
+<body>
+	<input type="text" name=""><button>切换图片</button>
+	<p>
+		<img src="https://gw.alicdn.com/tfs/TB18PGfvQvoK1RjSZFNXXcxMVXa-290-130.gif">
+	</p>
+</body>
+</html>
