@@ -1,0 +1,30 @@
+.container{
+	width: 1260px;
+	margin: 0 auto;
+}
+
+/*a链接共同样式*/
+a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #5B5A5A;
+}
+a.link:hover{
+	color:#DE4822;
+}
+
+/*清除浮动*/
+.clearfix:after,
+.clearfix:before{
+	display: block;
+	height: 0;
+	clear: both;
+	content: "";
+	visibility: hidden;
+}
+
+/*颜色统一*/
+.toColor{
+	font-size: 12px;
+	color:#DE4822;
+}
