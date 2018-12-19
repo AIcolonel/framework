@@ -1,0 +1,49 @@
+/*顶部导航菜单开始*/
+.top{
+	width: 100%;
+	height: 32px;
+	background: #D7D2D2;
+	font-size: 12px;
+}
+.top .container{
+	height: 32px;
+	line-height: 32px;
+}
+.top .top-left{
+	float: left;
+}
+.top .top-left .item,
+.top .top-right .item{
+	float: left;
+	margin-left: 15px;
+}
+.top .top-right{
+	float: right;
+}
+.item{
+	position: relative;
+}
+.item:hover .rotating{
+	transform: rotate(180deg);
+}
+.rotating{
+	transition: all 300ms;
+}
+.top-right-item{
+	white-space: nowrap;
+	position: absolute;
+	top: 32px;
+	left: 0px;
+	border: 1px solid #E7E4E4;
+	overflow: hidden;
+	/*height: 0;*/
+	display: none;
+}
+.top-right-item li{
+	padding: 0 5px;
+	background: #fff;
+}
+.top-right-item li:hover{
+	background: #D3D1D1;
+}
+/*顶部导航菜单结束*/
