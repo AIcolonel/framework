@@ -4,7 +4,7 @@
 	height: 32px;
 	background: #D7D2D2;
 	font-size: 12px;
-}
+} 
 .top .container{
 	height: 32px;
 	line-height: 32px;
@@ -47,3 +47,39 @@
 	background: #D3D1D1;
 }
 /*顶部导航菜单结束*/
+
+/*搜索引擎开始*/
+.search>.container{
+	height: 120px;
+	/*line-height: 120px;*/
+	background: green;
+}
+.logo{
+	float: left;
+	margin-top: 30px;
+	margin-left: 20px;
+}
+.search-all{
+	float: left;
+	/*margin-left: */
+}
+.search-content{
+	float: left;
+	width: 500px;
+	height: 40px;
+	box-sizing: border-box;
+	border: 2px solid #CF0404;
+	padding:5px;
+	outline: none;
+	color: #AEAAAA;
+}
+.search-btn{
+	float: left;
+	width: 130px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bolder;
+}
+
+/*搜索引擎结束*/
