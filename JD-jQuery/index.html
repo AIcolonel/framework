@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/css/all.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-</head>
+</head> 
 <body>
 	<!-- 顶部导航菜单开始 -->
 	<div class="top">
@@ -73,13 +73,66 @@
 				<img src="images/taobao.png">
 			</div>
 			<div class="search-all">
-				<input type="text" name="text" placeholder="搜索商品/品牌/店铺" class="search-content">
-				<button class="search-btn">搜索</button>
+				<form action="https://s.taobao.com/search" id="search-form">
+					<input type="text" name="q" placeholder="搜索商品/品牌/店铺" class="search-content" autocomplete="off">
+					<div class="search-btn">搜索</div>
+				</form>
+				<ul class="search-layer"></ul>
 			</div>
 		</div>
 	</div>
 	<!-- 搜索引擎结束 -->
+
+	<!-- 中部导航菜单开始 -->
+	<div class="middle">
+		<div class="container">
+			<ul class="middle-menu clearfix">
+				<li><a href="javascript:;" class="link">天猫会员</a></li>
+				<li><a href="javascript:;" class="link">电器城</a></li>
+				<li><a href="javascript:;" class="link">喵鲜生</a></li>
+				<li><a href="javascript:;" class="link">医药馆</a></li>
+				<li><a href="javascript:;" class="link">营业厅</a></li>
+				<li><a href="javascript:;" class="link">魅力惠</a></li>
+				<li><a href="javascript:;" class="link">飞猪旅行</a></li>
+				<li><a href="javascript:;" class="link">苏宁易购</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 中部导航菜单结束 -->
+
+	<!-- 轮播图开始 -->
+	<div class="coursel">
+		<div class="container">
+			<div class="coursel-list" id="coursel-list">
+				  
+			</div>
+			<div class="goods-menu">
+				<i class="fas fa-bars"></i> 
+				全部分类
+			</div>
+			<ul class="goods-list">
+				<li><a href="javascript:;" class="link"><i class="fas fa-blender-phone"></i> 家用电器</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-mobile-alt"></i> 手机 / 运营商 / 数码</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-laptop"></i> 电脑 / 办公</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-warehouse"></i> 家居 / 家具 / 家装 / 厨具</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-tshirt"></i> 男装 / 女装 /	童装 / 内衣</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-dog"></i> 美妆 / 个护清洁 /	宠物</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-shoe-prints"></i> 男鞋 / 运动 /	户外</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-car-side"></i> 房产 / 汽车 /	汽车用品</a></li>
+				<li><a href="javascript:;" class="link"><i class="fab fa-centos"></i> 母婴 / 玩具乐器</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-wine-glass"></i> 食品 / 酒类 /	生鲜 / 特产</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-prescription-bottle-alt"></i> 医药保健 / 计生情趣</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-book"></i> 图书 / 文娱 /	电子书</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-plane"></i> 机票 /	酒店 /	旅游 /	生活</a></li>
+				<li><a href="javascript:;" class="link"><i class="fas fa-comment-alt"></i> 理财 /	众筹 /	白条 /	保险</a></li>
+			</ul>
+			<ul class="goods-list-layer"></ul>
+		</div>
+	</div>
+	<!-- 轮播图结束 -->
 </body>
 <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/animation.js"></script>
+<script type="text/javascript" src="js/coursel.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </html>
