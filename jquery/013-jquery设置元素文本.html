@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>013-jquery设置元素文本.html</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<button>插入代码片段</button>
+	<button>获取代码片段</button>
+	<button>插入文本</button>
+	<button>获取值</button>
+	<button>设置值</button>
+	<div></div>
+	<input type="text" name="">
+	<input type="checkbox" name="" checked="">
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		console.log($("button")[0]);
+		/**
+		* HTML代码/文本/值
+		* html([val|fn])和原生JS的innerHTMl一样可以解析代码片段
+		* text([val|fn])和原生JS的innerText一样只能够插入文本
+		* val([val|fn|arr])和原生JS的value方法一样
+		*/
+		$('button').eq(0).click(function(){
+			$('div').html("<p>我是段落<span>我是span</span></p>")
+		});
+		$('button').eq(1).click(function(){
+			console.log($('div').html());
+		});
+		$('button').eq(2).click(function(){
+			$('input').text("<p>我是段落<span>我是span</span></p>")
+		});
+		$('button').eq(3).click(function(){
+			console.log($('input').val());
+		});
+		$('button').eq(4).click(function(){
+			$('input').val('请输入内容');
+		});
+
+		$('button').each(function(index,element){
+			console.log(index,element);
+			console.log("this:::",this);
+		})
+
+		console.log($("input").eq(1).prop("checked","checked"))
+	});
+</script>
+</html>

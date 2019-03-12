@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>014-jquery的位置设置.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 200px;
+			height: 200px;
+			background: red;
+			border: 50px solid #000;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		.son{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<button>获取</button>
+	<button>设置</button>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+	   /**
+	    * offset([coordinates])
+		position()
+		scrollTop([val])
+		scrollLeft([val])
+	    */
+	   
+	   $('button').eq(0).click(function(){
+	   	//offset([coordinates])
+	   	//可以获取和设置元素距离窗口的偏移量
+	   	//注意点：接收一个对象
+	   		// console.log($('.son').offset().left);
+	   		// console.log($('.son').offset({left:400}));
+	   		
+	   		//position()
+	   		//可以获取元素距离参考父元素定位的偏移量
+	   		//注意点：不能够设置参考父元素定位的偏移量
+	   		console.log($('.son').position());
+	   })
+	   $('button').eq(1).click(function(){
+	   		$('.son').position({
+	   			top:50,
+	   			left:50
+	   		})
+	   		// $('.son').css({
+	   		// 	left:400
+	   		// })
+	   })
+
+	   console.log(document.getElementsByTagName('button'))
+	});
+</script>
+</html>

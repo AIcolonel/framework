@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>021-jquery的事件委托.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style:none;
+			width: 100%;
+			margin-top: 20px;
+			background: yellow; 
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		$(function(){
+			//方法1
+		   	// $('ul').delegate('li', 'click', function(event) {
+		   	// 	console.log($(this).index());
+		   	// 	console.log($(this).get());
+		   	// });
+		   	//方法2
+		   	$('ul').on('click', 'li', function(event) {
+		   		console.log($(this).index());
+		   		console.log($(this).get());
+		   	});
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li>lu01</li>
+		<li>lu02</li>
+		<li>lu03</li>
+		<li>lu04</li>
+		<li>lu05</li>
+		<li>lu06</li>
+		<li>lu07</li>
+		<li>lu08</li>
+		<li>lu09</li>
+	</ul>
+</body>
+</html>

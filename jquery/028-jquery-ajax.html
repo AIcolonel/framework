@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>028-jquery的ajax请求.html</title>
+</head>
+<body>
+	<button>请求数据</button>
+	<input type="text" name="">
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+	   $("button").click(function(){
+	   		/*
+	   		$.ajax({
+	   			url:"028-data.json",
+	   			type:"GET",
+	   			data:{name:"tom",age:20},
+	   			success:function(data){
+	   				console.log(data);
+	   			},
+	   			error:function(jqXHR,status){
+	   				console.log("status:::",status)
+	   			}
+	   		})
+	   		*/
+	   	/*
+	   		$.getJSON('028-data.json',function(json, textStatus) {
+	   				console.log(json);
+	   		});
+	   	*/
+	   		console.log($('input').prop("checked"));
+	   		// $("button").css("width","200px").css("height","200px");
+	   		$("button").css("width","200px");
+	   		$("button").css("height","200px");
+	   })
+	});
+</script>
+</html>

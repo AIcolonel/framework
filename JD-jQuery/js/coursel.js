@@ -11,7 +11,7 @@ function Carousel(option){
 	this.oBottomBtn = null;
 	this.playDuration = option.playDuration;
 	this.now = 0;
-	console.log(option)
+	// console.log(option)
 	//初始化
 	this.init();
 	//绑定事件

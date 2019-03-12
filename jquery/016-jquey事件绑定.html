@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>016-jquery事件绑定</title>
+</head>
+<body>
+	<button>绑定事件</button>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+	   /**
+	    * 1.eventName(function(){})
+	    * 编码效率高/jquery只实现了部分事件
+	    * 2.on("eventName",function(){})
+	    * 编码效率低/JS所有事件都可以通过on加事件名实现
+	    *
+	    * 注意点：两种方法都可以同时绑定多个同名或者不同命事件，且不会覆盖
+	    */
+	   
+	   $("button").click(function(){
+	   		alert("hello lnj1");
+	   })
+	   $("button").click(function(){
+	   		alert("hello lnj2");
+	   })
+
+	   // $('button').on("click",function(){
+	   // 		alert("hello lnj123");
+	   // })
+	});
+</script>
+</html>

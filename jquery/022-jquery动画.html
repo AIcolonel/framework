@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>022-jquery动画.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 400px;
+			height: 400px;
+			background: red;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		$(function(){
+		   $('button').eq(0).click(function(){
+		   		$("div").show(1000,function(){
+		   			alert("hello div");
+		   		})
+		   })
+		   $('button').eq(1).click(function(){
+		   		$("div").hide(1000,function(){
+		   			alert("goodbey div");
+		   		})
+		   })
+		   $('button').eq(2).click(function(){
+		   		$("div").toggle(1000,function(){
+		   			alert("hello div or goodbey div");
+		   		})
+		   })
+		});
+	</script>
+</head>
+<body>
+	<button>显示</button>
+	<button>隐藏</button>
+	<button>切换</button>
+	<div></div>
+</body>
+</html>

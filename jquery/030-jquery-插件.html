@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>030-jquery-插件.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+		}
+		.box1{
+			background: red;
+		}
+		.box2{
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+	<button>设置样式</button>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	$.fn.extend({
+		setCSS:function(options){
+
+			return this.each(function(){
+				if(typeof options == "string"){
+					// console.log(11)
+					console.log($(this).css(options))
+					// var value=$(this).css(options)
+					// return $(this).css(options);
+				}else{
+					for(key in options){
+						// console.log(options)
+						this.style[key]=options[key];
+					}
+				}
+			})
+			
+		}
+	})
+</script>
+<script>
+	$(function(){
+	   $("button").click(function(){
+	   		// $('div').setCSS("width")
+	   		$('div').setCSS("width");
+	   		// console.log($('div').css("width"))
+	   })
+	});
+</script>
+</html>

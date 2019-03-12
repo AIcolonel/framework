@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>011-解决jquery的$使用冲突问题.html</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	(function(w){
+		w.$=function(){
+			console.log("this is my $");
+		}
+	})(window);
+</script>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	//当window上也有$方法，此时调用$()执行的是jquery的$方法
+	console.log($());
+	//解决冲突:将jquery上的$释放掉
+	//同时也可以自己定义一个jquery的新的字符
+	var kz=jQuery.noConflict();
+
+	kz(function(){
+	   console.log('this is kz');
+	});
+	$();
+</script>
+</html>

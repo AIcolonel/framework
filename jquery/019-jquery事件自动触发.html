@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>019-jquery事件自动触发.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			background: red;
+		}
+		.box2{
+			width: 100px;
+			height: 100px;
+			background: blue;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		$(function(){
+			/**
+			 * trigger()方法不会阻止事件冒泡和默认行为
+			 * 但是对于a标签，trigger方法只能有阻止默认行为，无法阻止冒泡
+			 * triggerHandler()方法会阻止事件冒泡和默认行为
+			 * 
+			*/
+			$(".box").click(function(){
+				alert("hello box")
+			})
+		   	$(".box2").click(function(){
+		   		alert('hello box2');
+		   	})
+		   	// $(".box2").trigger("click");
+		   	// $(".box2").triggerHandler("click");
+		   	$('span').click(function(){
+		   		alert('hello span');
+		   	})
+		   	$('a').click(function(){
+		   		alert('hello a');
+		   	})
+		   	// $('span').trigger('click');
+		   	// $('a').trigger('click');
+		   	$('a').triggerHandler('click');
+		});
+	</script>
+</head>
+<body>
+	<div class="box">
+		<div class="box2"></div>
+	</div>
+	<a href="http://www.baidu.com">
+		我是超链接
+		<span>我是span</span>
+	</a>
+</body>
+</html>

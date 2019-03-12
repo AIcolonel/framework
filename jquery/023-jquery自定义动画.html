@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>023-jquery自定义动画.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		.box2{
+			width: 100px;
+			height: 100px;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<button>开始动画</button>
+	<div class="box1"></div>
+	<div class="box2"></div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+	   $("button").click(function(){
+	   		/**
+	   		 * 当传入一个对象是则每个属性同时发生变化，要想实现队列动画则在毁掉函数中执行,或者每一个属性变化调用一次animate方法
+	   		 */
+	   		/*
+	   		$(".box1").animate({
+	   			width:"200",
+	   			height:"200"
+	   		},1000,function(){
+	   			alert("animation done")
+	   		})
+	   		*/
+	   		/*
+	   		$(".box1").animate({
+	   			width:"200",
+	   		},1000,function(){
+	   			$(".box1").animate({height:"200"},1000,function(){
+	   				alert("animate done")
+	   			})
+	   		})
+	   		*/
+	   		$(".box1").animate({
+	   			width:"200",
+	   		},1000).animate({
+	   			height:"200",
+	   		},1000)
+	   })
+	   console.log($('.box1').width())
+	});
+</script>
+</html>

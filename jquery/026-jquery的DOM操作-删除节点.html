@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<button>remove</button>
+	<button>empty</button>
+	<button>detach</button>
+	<div>我是div</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		$("div").click(function(){
+			alert("hello div")
+		})
+	   $("button:eq(0)").click(function(){
+	   		$("div").remove();
+	   })
+	   $("button:eq(1)").click(function(){
+	   		$("div").empty();
+	   })
+	   $("button:eq(2)").click(function(){
+	   		console.log($("div").detach());
+	   		var $div=$("div").detach();
+	   })
+	});
+</script>
+</html>

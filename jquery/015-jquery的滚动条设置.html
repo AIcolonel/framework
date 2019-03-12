@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>015-jquery的滚动条设置.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 100px;
+			height: 300px;
+			border: 1px solid #000;
+			overflow: auto;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		/**
+		 *scrollTop(),不传值是获取滚动条的偏移量，传值设置偏移量
+		 *注意点：不能设置（100px），只能设置数字
+		 */
+		$(function(){
+		   $("button").eq(0).click(function(){
+		   		console.log($('div').scrollTop())
+		   })
+		   $("button").eq(1).click(function(){
+		   		//$('div').scrollTop("100px")(错误写法)
+		   		// $('div').scrollTop(100);
+		   		// 为了兼容IE和别的版本浏览器，需要如下写法：
+		   		// console.log($("body").scrollTop())
+		   		// $("html.body").scrollTop(300);
+		   		$(document).scrollTop(300);
+		   })
+		});
+	</script>	
+</head>
+<body>
+	<div class="box">
+		我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子我是盒子
+	</div>
+	<button>获取</button>
+	<button>设置</button>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>029-kquery.html</title>
+</head>
+<body>
+	<div id="box1">div1</div>
+	<div class="box2">div2</div>
+	<div>div3</div>
+</body>
+<!-- <script type="text/javascript" src="js/jquery-1.12.4.js"></script> -->
+<script type="text/javascript" src="js/kquery-1.0.js"></script>
+<script type="text/javascript">
+	//1.传入的是Boolean时
+	console.log($(false));
+	//2.传入的是函数时
+	console.log($(function(){
+		console.log(this);
+	}));
+	//3.传入的是代码片段
+	console.log($("<p><span>我是span</span></p>"));
+	console.log($("div"));
+	console.log($("div"));
+	//4.传入的是数组
+	var arr=[1,2,3,4,5];
+	var likeArr={0:'aa',1:'bb',2:'cc',3:'dd',length:4};
+	console.log($(likeArr));
+	//5.传入对象或者其他
+	var obj = {name:"tom",age:18}
+	console.log($(obj));
+	//get方法
+	console.log($('div').get(0)); 
+	console.log($('div').get()); 
+	console.log($('div').get(-1)); 
+	console.log($('div').get('aa')); 
+	
+</script>
+</html>

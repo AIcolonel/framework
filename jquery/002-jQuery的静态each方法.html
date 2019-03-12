@@ -7,10 +7,10 @@
 <body>
 	
 </body>
-<script type="text/javascript" src="jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript">
 	var arr1=[1,4,9,6,3,7];
-	var obj={0:1,1:4,2:9,3:6,4:3,5:7,length:6};
+	var obj={1:4,2:9,3:6,4:3,5:7,length:5};
 	/*
 	原生JS遍历数组用forEach方法，
 	第一个参数是值，第二个参数是下标，
@@ -25,7 +25,7 @@
 	可以遍历伪数组
 	each遍历有返回值，且返回当前遍历的数组
 	*/
-	var res=$.each(arr1,function(index,value){
+	var res=$.each(obj,function(index,value){
 		console.log(index,value);
 	});
 	console.log(res);

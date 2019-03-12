@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>024-jquery事件命名空间.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		/**
+		 * 想要事件命名空间有效，必须满足两个条件
+		 * 1.必须是用on来绑定事件
+		 * 2.需要调用trigger来自动触发事件
+		 */
+	   $('div').on("click.zs",function(){
+	   		alert("click1")
+	   })
+	   $('div').on("click.ls",function(){
+	   		alert("click2")
+	   })
+	   $('div').trigger("click.zs")
+	});
+</script>
+</html>

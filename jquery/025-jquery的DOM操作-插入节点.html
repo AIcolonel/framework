@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>025-jquery的DOM操作.html</title>
+</head>
+<body>
+	<button>添加1</button>
+	<button>添加2</button>
+	<button>添加3</button>
+	<button>添加4</button>
+	<button>添加5</button>
+	<button>添加6</button>
+	<ul>
+		<li>li1</li>
+	</ul>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+	   $("button:eq(0)").click(function(){
+	   		$("ul").append($("<li>我是创建的li</li>"))
+	   })
+	   $("button:eq(1)").click(function(){
+	   		$("<li>我是创建的li2</li>").appendTo($('ul'))
+	   })
+	   $("button:eq(2)").click(function(){
+	   		$("ul").prepend($("<li>我是创建的li</li>"))
+	   })
+	   $("button:eq(3)").click(function(){
+	   		$("<li>我是创建的li2</li>").prependTo($('ul'))
+	   })
+	   $("button:eq(4)").click(function(){
+	   		$("ul").after($("<p>我是创建的p</p>"))
+	   })
+	   $("button:eq(5)").click(function(){
+	   		$("ul").before($("<p>我是创建的p</p>"))
+	   })
+	});
+</script>
+</html>

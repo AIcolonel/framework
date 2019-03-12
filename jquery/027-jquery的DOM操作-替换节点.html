@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>027-jquery的DOM操作-替换节点.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<button>replaceWith</button>
+	<button>replaceAll</button>
+	<div>
+		我是div
+		<p>我是div的子元素p</p>
+	</div>
+	<div>
+		我是div2
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+		$("div").click(function(){
+			alert("hello div")
+		})
+	   $("button:eq(0)").click(function(){
+	   		$("div").replaceWith('<span>我是span</span>');
+	   })
+	   $("button:eq(1)").click(function(){
+	   		$(this).replaceAll('div')
+	   })
+	});
+</script>
+</html>

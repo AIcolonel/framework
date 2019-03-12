@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>012-jquery入口函数写法.html</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script>
+		//第一种写法
+		$(document).ready(function(){
+			alert('jq lnj');
+		});
+		// 第二种写法
+		jQuery(document).ready(function(){
+			alert('jq lnj2');
+		})
+		//第三种写法（推荐）
+		$(function(){
+			alert('jq lnj3');
+		})
+		console.log($(function(){}))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

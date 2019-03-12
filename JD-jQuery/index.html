@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head> 
-<body>
+<body>  
 	<!-- 顶部导航菜单开始 -->
 	<div class="top">
 		<div class="container clearfix">
@@ -17,13 +17,14 @@
 				<li class="item"><a class="link" href="javascript:;">亲，请登录</a></li>
 				<li class="item"><a class="link" href="javascript:;">免费注册</a></li>
 				<li class="item"><a class="link" href="javascript:;">手机逛淘宝</a></li>
-			</ul>
+			</ul> 
 			<ul class="top-right clearfix">
 				<li class="item">
 					<a class="link" href="javascript:;">我的淘宝 <i class="fas fa-angle-down rotating"></i></a>
 					<ul class="top-right-item">
-						<li><a class="link" href="javascript:;">已买到的宝贝</a></li>
-						<li><a class="link" href="javascript:;">我的足迹</a></li>
+						<!-- <li><a class="link" href="javascript:;">已买到的宝贝</a></li>
+						<li><a class="link" href="javascript:;">我的足迹</a></li> -->
+						<li class="dropdown-loading"></li>
 					</ul>
 				</li>
 				<li class="item">
@@ -32,9 +33,11 @@
 				<li class="item">
 					<a class="link" href="javascript:;"> <i class="fas fa-star"></i> 收藏夹 <i class="fas fa-angle-down rotating"></i></a>
 					<ul class="top-right-item">
-						<li><a class="link" href="javascript:;">收藏的宝贝</a></li>
-						<li><a class="link" href="javascript:;">收藏的店铺</a></li>
+						<!-- <li><a class="link" href="javascript:;">收藏的宝贝</a></li>
+						<li><a class="link" href="javascript:;">收藏的店铺</a></li> -->
+						<li class="dropdown-loading"></li>
 					</ul>
+
 				</li>
 				<li class="item">
 					<a class="link" href="javascript:;">商品分类</a>
@@ -74,10 +77,14 @@
 			</div>
 			<div class="search-all">
 				<form action="https://s.taobao.com/search" id="search-form">
-					<input type="text" name="q" placeholder="搜索商品/品牌/店铺" class="search-content" autocomplete="off">
+					<input type="text" name="q" placeholder="搜索商品/品牌/店铺" class="search-content">
 					<div class="search-btn">搜索</div>
 				</form>
-				<ul class="search-layer"></ul>
+				<ul class="search-layer">
+					<!-- <li class="search-layer-item">
+						我是超人
+					</li> -->
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -130,9 +137,38 @@
 		</div>
 	</div>
 	<!-- 轮播图结束 -->
+
+	<!-- 热卖商品开始 -->
+	<div class="hot clearfix">
+		<div class="container clearfix">
+			<ul class="hot-list">
+				<li><img src="images/hot1.jpg"></li>
+				<li><img src="images/hot2.jpg"></li>
+				<li><img src="images/hot3.jpg"></li>
+				<li><img src="images/hot4.jpg"></li>	
+			</ul>
+			<ul class="hot-list">
+				<li><img src="images/hot5.jpg"></li>
+				<li><img src="images/hot6.jpg"></li>
+				<li><img src="images/hot7.jpg"></li>
+				<li><img src="images/hot8.jpg"></li>	
+			</ul>
+			<ul class="hot-list">
+				<li><img src="images/hot9.jpg"></li>
+				<li><img src="images/hot10.jpg"></li>
+				<li><img src="images/hot11.jpg"></li>
+				<li><img src="images/hot12.jpg"></li>	
+			</ul>
+			<div class="hot-btn hot-btn-left"><i class="fas fa-chevron-left"></i></div>
+			<div class="hot-btn hot-btn-right"><i class="fas fa-chevron-right"></i></div>
+		</div>
+	</div>
+	<!-- 热卖商品结束 -->
 </body>
 <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="js/animation.js"></script>
 <script type="text/javascript" src="js/coursel.js"></script>
+<script type="text/javascript" src="js/showhide.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 </html>

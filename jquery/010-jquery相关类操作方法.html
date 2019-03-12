@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>010-jquery相关类操作方法.html</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.add{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		.remove{
+			border: 10px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<button>添加类</button>
+	<button>删除类</button>
+	<button>切换类</button>
+	<div></div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script>
+	$(function(){
+	   	//addClass(class|fn)添加类
+		//removeClass([class|fn])删除类
+		//toggleClass(class|fn[,sw])切换类
+
+		$('button:contains("添加")').click(function(){
+			$('div').addClass('add')
+		})
+		$('button:contains("删除")').click(function(){
+			$('div').addClass('remove')
+		})
+		$('button:contains("切换")').click(function(){
+			$('div').toggleClass('add remove')
+		})
+	});
+</script>
+</html>
